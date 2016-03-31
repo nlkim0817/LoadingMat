@@ -9,10 +9,9 @@ import scipy.io
 import numpy as np
 
 
-def read(files, sfname):
+def read(files):
  
     for fname in files:
-	pdb.set_trace()
 	raw = scipy.io.loadmat(fname)
 	raw = raw[raw.keys()[0]].astype(np.uint8)
 	pro = np.zeros((32,)*3, dtype=np.uint8)
